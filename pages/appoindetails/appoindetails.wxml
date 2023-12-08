@@ -1,0 +1,65 @@
+<!--pages/appoindetails/appoindetails.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="deta_top_zhanwei"></view>
+  <view class="deta_top">
+    <image src="../../images/dets.jpg" mode="" />
+    <view class="deta_text">
+      <view class="deta_tit">预约详情</view>
+      <view class="deta_teach">摘镜顾问:{{infolist.type}}</view>
+    </view>
+  </view>
+  <view class="main deta_cont">
+    <view class="deta_block">
+      <view class="deta_list">
+        <view class="deta_list_tit">
+          <image src="../../images/de1.png" mode="" />
+          <text>姓名</text>
+        </view>
+        <view class="deta_list_details">{{infolist.name}}</view>
+      </view>
+      <view class="deta_list">
+        <view class="deta_list_tit">
+          <image src="../../images/de2.png" mode="" />
+          <text>手机号</text>
+        </view>
+        <view class="deta_list_details">{{infolist.phone}}</view>
+      </view>
+    </view>
+    <view class="deta_block">
+      <!-- <view class="deta_list">
+        <view class="deta_list_tit">
+          <image src="../../images/de3.png" mode="" />
+          <text>手术日期</text>
+        </view>
+        <view class="deta_list_details">{{infolist.time}}</view>
+      </view> -->
+      <view class="deta_list">
+        <view class="deta_list_tit">
+          <image src="../../images/de4.png" mode="" />
+          <text>预约到院时间</text>
+        </view>
+        <view wx:if="{{infolist.reach_time}}" class="deta_list_details deta_list_details2">{{infolist.reach_time}}</view>
+      </view>
+      <view class="deta_list" wx:if="{{infolist.mome}}">
+        <view class="deta_list_tit">
+          <image src="../../images/de3.png" mode="" />
+          <text>预约内容</text>
+        </view>
+        <view  class="deta_list_details deta_list_details2">{{infolist.mome}}</view>
+      </view>
+    </view>
+  
+  </view>
+  <view class="tishi main">请将此页面截图发给联系人</view>
+  <view class="cinbootom">
+    <view class="btns" bind:tap="bringMap">到院路线</view>
+    <view class="btns" wx:if="{{infolist.status==0||infolist.status==1||infolist.status==''||!infolist.status}}" bind:tap="cancellation">取消预约</view>
+    <view class="btns" wx:if="{{infolist.status==5}}">已完成</view>
+    <view class="btns huise" wx:if="{{infolist.status==2}}">已取消</view>
+    <view class="btns huise" wx:if="{{infolist.status==3}}">已过期</view>
+  </view>
+  <view class="zhanwei"></view>
+</view>

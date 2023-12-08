@@ -1,0 +1,11 @@
+<!--custom-tab-bar/index.wxml-->
+<view class=" _tabbar">
+  <view class=" titem {{_tabbat==0?'tCdk':''}}" data-index="0" bind:tap="switchTap">
+    <image class="image"  src="{{_tabbat==0?homeSelectImg:homeImg}}" />
+    <text>首页</text>
+  </view>
+  <view class=" titem {{_tabbat==1?'tCdk':''}}" data-index="1" bind:tap="switchTap">
+    <image class="image" src="{{_tabbat==1?sdicSelectImg:sdicImg}}" />
+    <text>我的</text>
+  </view>
+</view>

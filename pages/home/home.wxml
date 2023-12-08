@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+
+<view class="container">
+  <view class="conta" style="padding-top: {{navHeight}}px;">
+    <view class="logo">
+      <image src="../../images/logoin.png" mode="" />
+    </view>
+    <view class="home">
+      <image src="../../images/homes.png" mode="" />
+    </view>
+    <view class="gobutton">
+      <view class="gobutton_lists" bindtap="gonext1">手术检查预约</view>
+      <view class="gobutton_lists" bindtap="gonext2">术后复查预约</view>
+      <view class="gobutton_list" bindtap="gonext3">代替他人预约</view>
+    </view>
+    <!-- <view style="font-size: 12rpx;"> {{optionssata}}</view> -->
+
+   
+  </view>
+  <view class="zhanwei"></view>
+</view>

@@ -1,0 +1,131 @@
+/* pages/login/login.wxss */
+.conta {
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; */
+  background: linear-gradient(to bottom, #fff, #fff, #e7f0fa);
+  padding-bottom: 58rpx;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 308rpx;
+  height: 210rpx;
+  margin: auto;
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.text {
+  width: 630rpx;
+  margin: auto;
+  margin-top: 80rpx;
+  font-size: 28rpx;
+  color: #8c8c8c;
+  line-height: 45rpx;
+}
+
+.tit {
+  width: 660rpx;
+  margin: auto;
+  margin-top: 75rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.getnumber {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c9c9c9;
+  border-radius: 20rpx;
+  justify-content: space-between;
+  width: 660rpx;
+  margin: auto;
+  margin-top: 35rpx;
+  height: 97rpx;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+}
+
+.number_tishi {
+  font-size: 27rpx;
+  color: #acacac;
+}
+
+.number {
+  font-size: 27rpx;
+  color: #202020;
+}
+
+.getnumber .numan {
+  background: none;
+  padding: 0;
+  margin: 0;
+  line-height: 97rpx;
+  width: auto;
+  font-size: 27rpx;
+  font-weight: normal;
+  color: #4e89f1;
+}
+
+.xuanlist {
+  width: 660rpx;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  margin-top: 55rpx;
+}
+
+.staisu {
+  font-size: 27rpx;
+  color: #202020;
+  margin-left: 15rpx;
+  transform: translateY(2rpx);
+  display: inline-block;
+}
+
+.login {
+  width: 658rpx;
+  height: 97rpx;
+  line-height: 97rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4e89f1;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-top: 90rpx;
+}
+
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #4e89f1;
+  border-color: #4e89f1;
+}
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 18rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

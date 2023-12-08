@@ -1,0 +1,56 @@
+<!--componentes/appoint/appoint.wxml-->
+<view class="from_input">
+  <view class="picker" bind:tap="getTime"> 
+    <text wx:if="{{time!=''}}">{{time}}</text>
+    <text wx:if="{{time==''}}">请选择就诊日期</text>
+    <image class="xiala" src="../../images/xiala.png" mode="" />
+  </view>
+</view>
+<view class="tan" bind:tap="close" wx:if="{{shoupop}}"></view>
+<view class="time_pop" wx:if="{{shoupop}}">
+  <view class="po_top">
+    <view class="title">
+      <view class="tit1">感谢您选择阿玛施眼科</view>
+      <view class="tit2">请选择预约时间</view>
+    </view>
+    <view class="close" bind:tap="close">
+      <image src="../../images/close.png" mode="" />
+    </view>
+  </view>
+  <view class="po_cen">
+    <view class="cen_top">
+      <view class="centit">到院日期</view>
+      <picker bindchange="bindPickerChange" value="{{arrayDateime[indexDateime].id}}" range="{{arrayDateime}}" data-selecthx="{{arrayDateime[indexDateime].name}}"  range-key="{{'name'}}">
+        <view class="pickertime">
+          <text>请选择日期：</text>
+          <text class="shijian">{{arrayDateime[indexDateime].name}}</text>
+          <image class="timethere" src="../../images/timethere.png" mode="" />
+        </view>
+      </picker>
+    </view>
+    <view class="type_time">
+      <view class="timelist {{tiqiindex==index?'active':''}}"  wx:for="{{everydaylist}}" wx:key="item" data-index="{{index}}" data-dats="{{item}}" bind:tap="switchDate">
+        <view class="week">{{item.week}}</view>
+        <view class="daytime">
+          <text class="daytime1">{{item.month}}</text>
+          <text class="daytime2">/{{item.day}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="po_bot">
+    <view class="po_bot_tit">到院时间</view>
+    <view class="number_cont">
+      <!-- wx:for="{{timelist}}" wx:key="item" data-dats ="{{item}}"  bind:tap="goReexamine" -->
+      <view class="numberlist {{item.iszhan==true?'youhao':''}} {{timstiindex==index&&timstiindex!=''?'active':''}}"  wx:for="{{timelist}}" wx:key="item" data-dats="{{item}}" data-index="{{index}}" bind:tap="Timing">
+        <view class="number_time">{{item.time}}</view>
+        <!-- <view class="number_cishu">余号：{{yue==2&&ri>=10&&ri<=17?0:item.yuhao}}</view> -->
+        <view class="number_cishu">余号：{{item.yuhao}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="cinbootom">
+    <view class="yuyue" bind:tap="next">下一步</view>
+  </view>
+  <view class="zhanwei"></view>
+</view>

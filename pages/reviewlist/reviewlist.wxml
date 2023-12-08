@@ -1,0 +1,31 @@
+<!--pages/reviewlist/reviewlist.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="topname">
+    <image class="fanhui" src="../../images/fanhui.png" mode="" bind:tap="fanhui" />
+    <text>术后复查</text>
+  </view>
+  <view class="main">
+    <view class="list" wx:for="{{infolist}}" wx:key="item" data-id="{{item.id}}" data-dats="{{item}}" data-status="{{item.status}}" bind:tap="goReexamineDetails">
+      <view class="list_img">
+        <image src="../../images/eyes.png" mode="" />
+      </view>
+      <view class="list_text">
+        <view class="time">预约时间：{{item.add_time}}</view>
+        <view class="name">姓名：{{item.name}}</view>
+      </view>
+      <view class="cha_rig">
+        <view class="status status1" wx:if="{{item.status==0||item.status==1}}">已预约</view>
+        <view class="status status2" wx:if="{{item.status==5}}">已完成</view>
+        <view class="status status3" wx:if="{{item.status==2}}">已取消</view>
+        <view class="status status4" wx:if="{{item.status==3}}">已过期</view>
+      </view>
+    </view>
+  </view>
+  <view class="cinbootom">
+    <view class="yuyue" bind:tap="next" bind:tap="goReexamine">复查预约</view>
+  </view>
+  <view class="zhanwei"></view>
+</view>

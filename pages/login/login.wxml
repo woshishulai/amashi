@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="conta" style="padding-top: {{navHeight}}px;">
+    <view class="main">
+      <view class="logo">
+        <image src="../../images/logoin.png" mode="" />
+      </view>
+      <view class="text">
+        您暂未授权摘镜预约小程序获取您的信息，将无法正常使用小程序的所有预约功能，如需正常使用，请点击获取手机号码授权登录。
+      </view>
+      <view class="tit">手机号码</view>
+      <view class="getnumber">
+        <view class="number_tishi" wx:if="{{telnumber==''}}">点击右侧按钮获取手机号码</view>
+        <view class="number" wx:if="{{telnumber!=''}}">{{telnumber}}</view>
+        <button class="numan" open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber">获取手机号码</button>
+      </view>
+      <view class="xuanlist">
+        <checkbox-group bindchange="selectedList">
+        <label>
+          <checkbox  name="checkboxGroup" checked="checked"></checkbox><text class="staisu">记住登录状态 </text>
+        </label>
+      </checkbox-group>
+      </view>
+      <view class="login" bindtap="login">授权登录</view>
+
+    </view>
+
+  </view>
+</view>

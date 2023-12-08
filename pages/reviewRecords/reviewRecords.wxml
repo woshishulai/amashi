@@ -1,0 +1,31 @@
+<!--pages/reviewRecords/reviewRecords.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="main">
+    <view class="list {{item.status==3||item.status==4?'listhui':''}}" wx:for="{{infolist}}"  wx:key="item" data-id="{{item.id}}" data-dats ="{{item}}"  bind:tap="goReexamine">
+      <view class="chaimg">查</view>
+      <view class="cha_text">
+        <view class="name">就诊人：{{item.name}}</view>
+        <view class="phone">手机号：{{item.phone}}</view>
+        <view class="phone">预约时间：{{item.reach_time}}</view>
+      </view>
+      <!-- <view class="cha_rig">
+        <view class="status status1" wx:if="{{item.status==1}}">已预约</view>
+        <view class="status status2" wx:if="{{item.status==2}}">已完成</view>
+        <view class="status status3" wx:if="{{item.status==3}}">已取消</view>
+        <view class="status status4" wx:if="{{item.status==4}}">已过期</view>
+      </view> -->
+      <view class="cha_rig">
+        <view class="status status1" wx:if="{{item.status==0||item.status==1}}">已预约</view>
+        <view class="status status2" wx:if="{{item.status==5}}">已完成</view>
+        <view class="status status3" wx:if="{{item.status==2}}">已取消</view>
+        <view class="status status4" wx:if="{{item.status==3}}">已过期</view>
+      </view>
+    </view>
+    <view>
+    <image wx:if="{{zhanshi1}}" class="zwxx" src="../../images/zwxx.png" mode=""/>
+    </view>
+  </view>
+</view>

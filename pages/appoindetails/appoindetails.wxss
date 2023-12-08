@@ -1,0 +1,147 @@
+/* pages/appoindetails/appoindetails.wxss */
+page {
+  background-color: #f6f8fa;
+}
+
+.container {
+  padding-bottom: 20rpx;
+  position: relative;
+}
+
+.deta_top_zhanwei {
+  width: 100%;
+  height: 328rpx;
+}
+
+.deta_top {
+  width: 100%;
+  height: 328rpx;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.deta_top image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.deta_text {
+  position: absolute;
+  top: 75rpx;
+  left: 40rpx;
+  z-index: 1;
+}
+
+.deta_text .deta_tit {
+  font-size: 32rpx;
+  color: #fff;
+  margin-left: 8rpx;
+}
+
+.deta_text .deta_teach {
+  width: 236rpx;
+  height: 42rpx;
+  border: 1rpx solid rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, .2);
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 42rpx;
+  margin-top: 30rpx;
+  border-radius: 30rpx;
+}
+
+.deta_cont {
+  margin-top: -64rpx;
+}
+
+.deta_block {
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 14rpx 30rpx 20rpx 30rpx;
+  margin-top: 22rpx;
+}
+
+.deta_block:first-child {
+  margin-top: 0;
+}
+
+.deta_list {
+  border-top: 1rpx dashed #e6e6e6;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+}
+
+.deta_list:first-child {
+  border: none;
+  /* border-bottom: 1rpx dashed #cccccc; */
+}
+
+.deta_list_tit {
+  display: flex;
+  align-items: center;
+}
+
+.deta_list_tit image {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+
+.deta_list_tit text {
+  font-size: 30rpx;
+  color: #3a3a3a;
+  margin-left: 22rpx;
+}
+
+.deta_list .deta_list_details {
+  font-size: 30rpx;
+  color: #202020;
+  line-height: 56rpx;
+  margin-left: 52rpx;
+  margin-top: 6rpx;
+}
+
+.deta_list_details2 {
+  font-size: 28rpx;
+}
+
+.tishi {
+  text-align: center;
+  font-size: 30rpx;
+  color: #ff0000;
+  line-height: 55rpx;
+  padding: 20rpx 0;
+}
+
+.cinbootom {
+  width: 100%;
+  height: 140rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.btns {
+  width: 326rpx;
+  height: 96rpx;
+  border-radius: 20rpx;
+  background-color: #4e89f1;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 96rpx;
+  /* margin: auto; */
+}
+
+.huise {
+  background-color: #b9bec4;
+}

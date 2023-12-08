@@ -1,0 +1,48 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="conta" style="padding-top: {{navHeight}}px;">
+  <view class="conta_cont">
+    <view class="geren">
+      <view class="touxiang" bind:tap="goInfofrom">
+        <image wx:if="{{userInfo.avator}}" src="{{userInfo.avator}}" mode=""/>
+        <image wx:if="{{!userInfo.avator}}" src="../../images/more.png" mode=""/>
+      </view>
+      <view class="geren_right" bind:tap="goInfofrom">
+        <view class="geri_top text-hidden" wx:if="{{userInfo.nick_name}}">{{userInfo.nick_name}}</view>
+        <view class="geri_top text-hidden" wx:if="{{!userInfo.nick_name}}">微信用户</view>
+        <view class="geri_bot">
+        <text>个人资料</text>
+        <image src="../../images/reb.png" mode=""/>
+        </view>
+      </view>
+    </view>
+    <view class="list_cont">
+      <view class="list" bind:tap="goOrder">
+        <image src="../../images/myicon1.png" mode=""/>
+        <text>我的预约订单</text>
+      </view>
+      <view class="list" bind:tap="goReviewRecords">
+        <image src="../../images/myicon2.png" mode=""/>
+        <text>复查记录</text>
+      </view>
+      <button class="list" open-type="contact">
+        <image src="../../images/myicon3.png" mode=""/>
+        <text>客服专员</text>
+      </button>
+      <view class="list" bind:tap="goContact">
+        <image src="../../images/myicon4.png" mode=""/>
+        <text>联系我们</text>
+      </view>
+      <!-- <view class="list" bind:tap="goYinsi">
+        <image src="../../images/myicon5.png" mode=""/>
+        <text>隐私政策</text>
+      </view> -->
+      <view class="exit" bind:tap="exitclose" wx:if="{{userInfo.id}}">
+        退出登录
+      </view>
+    </view>
+  </view>
+    
+  </view>
+  <view class="zhanwei"></view>
+</view>

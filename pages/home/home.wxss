@@ -1,0 +1,72 @@
+/* pages/home/home.wxss */
+.conta {
+  height: calc(100vh - 115rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #fff, #fff, #e7f0fa);
+  padding-bottom: 58rpx;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 308rpx;
+  height: 210rpx;
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.home {
+  width: 543rpx;
+  height: 512rpx;
+}
+
+.home image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gobutton {
+  width: 520rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gobutton_lists {
+  width: 246rpx;
+  height: 182rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  background-color: #4e89f1;
+  border-radius: 30rpx;
+  color: #fff;
+  margin-bottom: 26rpx;
+  padding: 0 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.gobutton .gobutton_list {
+  width: 100%;
+  height: 85rpx;
+  text-align: center;
+  line-height: 85rpx;
+  background-color: #4e89f1;
+  border-radius: 30rpx;
+  color: #447fe9;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  background: linear-gradient(0deg,#a1c4fd,#c2e9fb);
+  font-weight: bold;
+  border: 2rpx solid #4e89f1;
+}
+

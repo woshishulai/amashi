@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="nav">
+  <!-- //shows -->
+    <view class="navlist {{shows==0?'active':''}}" data-num="0" bind:tap="qiehuan">我的预约</view>
+    <view class="navlist {{shows==1?'active':''}}" data-num="1"  bind:tap="qiehuan">代人预约</view>
+  </view>
+  <view class="main">
+  <view class="blockone" wx:if="{{shows==0?'active':''}}">
+    <image wx:if="{{zhanshi1}}" class="zwxx" src="../../images/zwxx.png" mode=""/>
+    <view class="list" wx:for="{{infolist_my}}" wx:key="item" data-dats ="{{item}}"  bind:tap="goReexamine">
+      <view class="chaimg">约</view>
+      <view class="cha_text">
+        <view class="name">就诊人：{{item.name}}</view>
+        <view class="phone">手机号：{{item.phone}}</view>
+        <view class="phone">预约时间：{{item.reach_time}}</view>
+      </view>
+      <view class="cha_rig">
+        <view class="status status1" wx:if="{{item.status==0||item.status==1}}">已预约</view>
+        <view class="status status2" wx:if="{{item.status==5}}">已完成</view>
+        <view class="status status3" wx:if="{{item.status==2}}">已取消</view>
+        <view class="status status4" wx:if="{{item.status==3}}">已过期</view>
+      </view>
+    </view>
+  </view>
+  <view class="blockone" wx:if="{{shows==1?'active':''}}">
+    <image wx:if="{{zhanshi2}}" class="zwxx" src="../../images/zwxx.png" mode=""/>
+    <view class="list" wx:for="{{infolist_he}}" wx:key="item" data-dats ="{{item}}"  bind:tap="goReexamine">
+      <view class="chaimg">约</view>
+      <view class="cha_text">
+        <view class="name">就诊人：{{item.name}}</view>
+        <view class="phone">手机号：{{item.phone}}</view>
+        <view class="phone">预约时间：{{item.reach_time}}</view>
+      </view>
+      <view class="cha_rig">
+        <view class="status status1" wx:if="{{item.status==0||item.status==1}}">已预约</view>
+        <view class="status status2" wx:if="{{item.status==5}}">已完成</view>
+        <view class="status status3" wx:if="{{item.status==2}}">已取消</view>
+        <view class="status status4" wx:if="{{item.status==3}}">已过期</view>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

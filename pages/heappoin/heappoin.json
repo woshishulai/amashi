@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar":"/navigationBar/navigationBar",
+    "appoint":"/componentes/appoint/appoint"
+  },
+  "navigationStyle":"custom"
+}

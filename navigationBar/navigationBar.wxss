@@ -1,0 +1,89 @@
+.navbar {
+  width: 100%;
+  background-color: pink;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.title-container {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.capsule {
+  margin-left: 10rpx;
+  height: 30rpx;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1rpx solid #fff;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+}
+
+.return {
+  width: 16rpx;
+  height: 31rpx;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 6px;
+  left: 104px;
+  right: 104px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom_head {
+  width: 750rpx;
+  /* background: #c2e9fb; */
+  background: #fff;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.custom_headtwo {
+  background: #fff;
+}
+
+.head_store {
+  font-size: 30rpx;
+  width: 340rpx;
+  margin-right: 20rpx;
+  margin-left: 30rpx;
+  flex-shrink: 0;
+  width: 314rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 首页头部logo */
+.head_store .hone_logo {
+  width: 278rpx;
+  height: 51rpx;
+  display: block;
+}
+
+/* 头部返回 */
+.head_store .return {
+  width: 14rpx;
+  height: 24rpx;
+}
+
+.head_store .return_text {
+  font-size: 30rpx;
+  color: #000000;
+  margin-left: 26rpx;
+  font-weight: normal;
+}

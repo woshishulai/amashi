@@ -1,0 +1,67 @@
+<!--pages/infofrom/infofrom.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="topname">
+    <image class="fanhui" src="../../images/fanhui.png" mode="" bind:tap="fanhui"/>
+    <text>个人资料</text>
+  </view>
+  <view class="main">
+    <view class="from_cont">
+      <view class="touxiang">
+        <button class="eleimg" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{avatarUrl}}"></image>
+        </button> 
+        <view class="nicheng">{{userInfo.nick_name}}</view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">昵称<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+        <form bindsubmit="formsubmit">
+          <input type="nickname" model:value="{{nick_name}}" bindblur="nicknameChange"  placeholder="点击授权获取微信昵称"/>
+        </form>
+        </view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">姓名<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <input type="text" model:value="{{name}}" placeholder="请输入您的姓名" bindinput="bindKeyname"/>
+        </view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">性别<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <picker bindchange="bindPickerChangeSex" value="{{arraySex[indexSex].id}}" range="{{arraySex}}"
+          data-selecthx="{{arraySex[indexSex].name}}"  range-key="{{'name'}}">
+            <view class="picker">
+              <text>{{arraySex[indexSex].name}}</text>
+              <image class="xiala" src="../../images/xiala.png" mode="" />
+            </view>
+          </picker>
+        </view>
+      </view>
+      <!-- <view class="blocks">
+        <view class="from_tit">就诊人证件<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <picker bindchange="bindPickerChangeId" value="{{arrayType[indexType].id}}" range="{{arrayType}}" data-selecthx="{{arrayType[indexType].name}}"  range-key="{{'name'}}" >
+            <view class="picker">
+              <text>{{arrayType[indexType].name}}</text>
+              <image class="xiala" src="../../images/xiala.png" mode="" />
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">证件号码<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <input type="text" model:value="{{point}}"  placeholder="请输入您的证件号码" bindinput="bindKeypoint"/>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view class="cinbootom">
+    <view class="yuyue" bind:tap="getSSave">保存</view>
+  </view>
+  <view class="zhanwei"></view>
+</view>

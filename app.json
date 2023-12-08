@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    
+    "pages/my/my",
+    "pages/heappoin/heappoin",
+    "pages/myappoin/myappoin",
+    "pages/appoindetails/appoindetails",
+    "pages/reviewlist/reviewlist",
+    "pages/reexamine/reexamine",
+    "pages/contact/contact",
+    "pages/reviewRecords/reviewRecords",
+    "pages/order/order",
+    "pages/infofrom/infofrom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {},
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#585858",
+    "selectedColor": "#e72815",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/tabicon1.png",
+        "selectedIconPath": "/images/tabicon1_cur.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabicon2.png",
+        "selectedIconPath": "/images/tabicon2_cur.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

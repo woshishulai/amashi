@@ -1,0 +1,106 @@
+<!--pages/heappoin/heappoin.wxml-->
+<page-meta>
+  <navbar title="{{title}}" back="{{back}}"></navbar>
+</page-meta>
+<view class="container">
+  <view class="topname">
+    <image class="fanhui" src="../../images/fanhui.png" mode="" bind:tap="fanhui"/>
+    <text>代人预约</text>
+  </view>
+  <view class="main">
+    <!-- <view class="title">基本信息</view> -->
+    <view class="from_cont">
+      <view class="blocks">
+        <view class="from_tit">就诊人<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <input type="text" value="{{name}}" placeholder="请输入就诊人真实姓名" bindinput="bindKeyname"/>
+        </view>
+      </view>
+      <!-- <view class="blocks">
+        <view class="from_tit">就诊人证件<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <picker bindchange="bindPickerChangeId" value="{{arrayType[indexType].id}}" range="{{arrayType}}" data-selecthx="{{arrayType[indexType].name}}"  range-key="{{'name'}}" >
+            <view class="picker">
+              <text>{{arrayType[indexType].name}}</text>
+              <image class="xiala" src="../../images/xiala.png" mode="" />
+            </view>
+          </picker>
+        </view>
+        <view class="from_input">
+          <input type="text" value="{{point}}" placeholder="请输入就诊人真实证件号码" bindinput="bindKeycid"/>
+        </view>
+      </view> -->
+      <view class="tishi">温馨提示：请填写就诊人的身份证姓名，到院当天携带有效身份证件。</view>
+      <view class="blocks">
+        <view class="from_tit">手机号<text class="star">*(必填)</text> </view>
+        <view class="from_input">
+          <input type="text" value="{{phone}}" placeholder="请输入就诊人手机号"  bindinput="bindKeyphone"/>
+        </view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">日期<text class="star">*(必填)</text> </view>
+        <appoint integ="1" bind:myevent="onMyEvent"></appoint>
+      </view>
+      
+      <view class="blocks">
+        <view class="from_tit">预约内容</view>
+        <view class="from_input">
+          <picker bindchange="bindPickerChange2" value="{{indexDay}}" range="{{arrayDay}}">
+            <view class="picker">
+              <text>{{arrayDay[indexDay]}}</text>
+              <image class="xiala" src="../../images/xiala.png" mode="" />
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="tips">
+        <view class="tips_tit">温馨提示</view>
+        <view class="tips_p">1.术前检查需提前停戴隐形眼镜七天以上；</view>
+        <view class="tips_p">2.检查、手术当天请素颜到院，不要化妆；</view>
+        <view class="tips_p">3.请提前坚持多做深呼吸，保持良好作息；</view>
+        <view class="tips_p">4.请按预约时间准时到院，感谢您的配合~</view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">摘镜顾问 </view>
+        <view class="from_input">
+          <input type="text" disabled="disabled" placeholder="" value="{{consultant}}" />
+        </view>
+      </view>
+    </view>
+    <!-- <view class="title">其他信息</view>
+    <view class="from_cont">
+      <view class="blocks">
+        <view class="from_tit">日期<text class="star">*(必填)</text> </view>
+        <appoint integ="1" bind:myevent="onMyEvent"></appoint>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">摘镜顾问 </view>
+        <view class="from_input">
+          <input type="text" disabled="disabled" placeholder="" value="{{consultant}}" />
+        </view>
+      </view>
+      <view class="tips">
+        <view class="tips_tit">温馨提示</view>
+        <view class="tips_p">1.术前检查需提前停戴隐形眼镜七天以上；</view>
+        <view class="tips_p">2.检查、手术当天请素颜到院，不要化妆；</view>
+        <view class="tips_p">3.请提前坚持多做深呼吸，保持良好作息；</view>
+        <view class="tips_p">4.请按预约时间准时到院，感谢您的配合；</view>
+      </view>
+      <view class="blocks">
+        <view class="from_tit">预约内容</view>
+        <view class="from_input">
+          <picker bindchange="bindPickerChange2" value="{{indexDay}}" range="{{arrayDay}}">
+            <view class="picker">
+              <text>{{arrayDay[indexDay]}}</text>
+              <image class="xiala" src="../../images/xiala.png" mode="" />
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view> -->
+  </view>
+  <view class="cinbootom">
+    <view class="yuyue" bind:tap="getReser">立即预约</view>
+  </view>
+  <view class="zhanwei"></view>
+</view>

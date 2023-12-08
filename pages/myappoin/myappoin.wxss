@@ -1,0 +1,196 @@
+/* pages/myappoin/myappoin.wxss */
+page {
+  background-color: #f6f8fa;
+}
+.container{
+  padding-bottom: 20rpx;
+}
+.topname {
+  width: 100%;
+  height: 105rpx;
+  background-color: #4e89f1;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 105rpx;
+  padding: 0 42rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.fanhui{
+  width: 32rpx;
+  height: 32rpx;
+  display: block;
+  margin-right: 16rpx;
+}
+
+.main {
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: #4e89f1;
+  padding: 20rpx 42rpx;
+  position: relative;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 24rpx;
+  height: 3rpx;
+  left: 6rpx;
+  background-color: #4e89f1;
+  top: calc(50% - 2rpx);
+}
+
+.from_cont {
+  background-color: #fff;
+  padding: 5rpx 32rpx 40rpx 32rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.from_tit {
+  font-size: 28rpx;
+  color: #202020;
+  line-height: 55rpx;
+  margin-top: 30rpx;
+  padding: 0 10rpx 0 10rpx;
+}
+
+.from_tit .star {
+  color: #ff0000;
+}
+
+.from_input {
+  height: 75rpx;
+  background-color: #f6f8fa;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.from_input .picker {
+  width: 100%;
+  height: 75rpx;
+  padding: 0 22rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #4e89f1;
+  display: flex;
+  align-items: center;
+}
+
+.from_input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 22rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #202020;
+}
+
+.from_input2 {
+  height: 200rpx;
+  background-color: #f6f8fa;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.from_input2 textarea {
+  width: 100%;
+  height: 100%;
+  padding: 20px 22rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #202020;
+  resize: none;
+}
+
+/* .from_input input::placeholder {
+  color: red;
+}
+
+.from_input input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: red;
+}
+
+.from_input input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: red;
+}
+
+.from_input input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: red;
+} */
+
+.picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xiala {
+  width: 15rpx;
+  height: 9rpx;
+}
+
+.tishi {
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  /* color: #d85905; */
+  color: #f70400;
+  margin-top: 30rpx;
+}
+
+.tips {
+  /* background-color: #fbfbe3; */
+  background-color: #f2f2f2;
+  padding: 40rpx 40rpx 50rpx 40rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+}
+
+.tips .tips_tit {
+  font-size: 30rpx;
+  /* color: #251d17; */
+  color: #f70400;
+}
+
+.tips .tips_p {
+  font-size: 24rpx;
+  /* color: #d85905; */
+  color: #4c7adc;
+  margin-top: 20rpx;
+}
+.cinbootom{
+  width: 100%;
+  height: 140rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx rgba(223, 234, 243, .54);
+  z-index: 9;
+}
+.yuyue{
+  width: 624rpx;
+  height: 96rpx;
+  border-radius: 20rpx;
+  background-color: #4e89f1;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 96rpx;
+  margin: auto;
+}

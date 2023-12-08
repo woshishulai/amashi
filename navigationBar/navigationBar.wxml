@@ -1,0 +1,14 @@
+<!--navigationBar/navigationBar.wxml-->
+<view class="custom_head {{back?'custom_headtwo':''}}" style="height:{{navHeight+10}}px;">
+  <view class="flex-row j_b" style="height:{{navObj}}px;padding-top:{{navTop}}px;padding-right:{{navObjWid+5}}px;">
+    <view class="head_store" wx:if="{{back==true}}" bindtap="back">
+      <image class="return" src="/images/return.png" ></image>
+      <text class="return_text">{{title}}</text>
+    </view>
+    <view class="head_store" wx:if="{{back==false}}">
+      <image class="hone_logo" src="/images/logo.png"></image>
+      <!-- hone_logo 278 51 -->
+    </view>
+  </view>
+</view>
+<view style="height:{{navHeight+10}}px;"></view>
